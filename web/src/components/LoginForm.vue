@@ -55,11 +55,14 @@ const loginHandler = () => {
 
 <style lang="less" scoped>
   .login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     text-align: center;
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    min-height: 15vw;
     border-radius: 10px;
-    box-shadow: 0 .46875vw 1.458333vw .416667vw rgba(0,0,0,.05),0 .3125vw .833333vw rgba(0,0,0,.08),0 .15625vw .3125vw -.208333vw rgba(0,0,0,.12);
+    box-shadow: 0 .46875vw 1.458333vw .416667vw rgba(0,0,0,.05), 0 .3125vw .833333vw rgba(0,0,0,.08),0 .15625vw .3125vw -.208333vw rgba(0,0,0,.12);
     padding: 20px 0px;
 
     .login-form-header {
@@ -73,19 +76,27 @@ const loginHandler = () => {
     }
 
     .login-form-body {
+      height: 0;
+      flex: 1;
+      display: flex;
+      align-items: center;
       margin: 20px 20px;
 
-      input {
-        height: 50px;
+      form {
         width: 100%;
-        background-color: #eee;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        padding: 0 20px;
-      }
 
-      .form-item + .form-item {
-        margin-top: 10px;
+        input {
+          height: 3vw;
+          width: 100%;
+          background-color: #eee;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          padding: 0 20px;
+        }
+
+        .form-item + .form-item {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -93,9 +104,9 @@ const loginHandler = () => {
       button {
         font-size: 1.041667vw;
         font-weight: 500;
-        height: 2.708333vw;
         margin: 0 auto;
-        width: 14.0625vw;
+        width: 14vw;
+        height: 2.5vw;
         box-shadow: none;
             border-radius: 0.625vw;
             padding-left: 1.041667vw;
